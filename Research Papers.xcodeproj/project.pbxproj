@@ -14,6 +14,7 @@
 		EADBDB07275E795700B7103E /* Research_Papers.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EADBDB05275E795700B7103E /* Research_Papers.xcdatamodeld */; };
 		EADBDB09275E795900B7103E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EADBDB08275E795900B7103E /* Assets.xcassets */; };
 		EADBDB0C275E795900B7103E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EADBDB0A275E795900B7103E /* LaunchScreen.storyboard */; };
+		EADBDB14275EBB9800B7103E /* ResearchPapersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADBDB13275EBB9800B7103E /* ResearchPapersTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		EADBDB08275E795900B7103E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EADBDB0B275E795900B7103E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EADBDB0D275E795900B7103E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EADBDB13275EBB9800B7103E /* ResearchPapersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchPapersTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				EADBDAFE275E795700B7103E /* SceneDelegate.swift */,
 				EADBDB00275E795700B7103E /* ViewController.swift */,
 				EADBDB02275E795700B7103E /* Main.storyboard */,
+				EADBDB13275EBB9800B7103E /* ResearchPapersTVC.swift */,
 				EADBDB08275E795900B7103E /* Assets.xcassets */,
 				EADBDB0A275E795900B7103E /* LaunchScreen.storyboard */,
 				EADBDB0D275E795900B7103E /* Info.plist */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EADBDB01275E795700B7103E /* ViewController.swift in Sources */,
+				EADBDB14275EBB9800B7103E /* ResearchPapersTVC.swift in Sources */,
 				EADBDAFD275E795700B7103E /* AppDelegate.swift in Sources */,
 				EADBDAFF275E795700B7103E /* SceneDelegate.swift in Sources */,
 				EADBDB07275E795700B7103E /* Research_Papers.xcdatamodeld in Sources */,
