@@ -8,6 +8,7 @@
 import UIKit
 
 class ResearchPapersTVC: UITableViewController {
+    var reports:technicalReports? = nil
     
     
     @IBOutlet var theTable: UITableView!
@@ -24,15 +25,14 @@ class ResearchPapersTVC: UITableViewController {
                   do {
                       let decoder = JSONDecoder()
                       let reportList = try decoder.decode(technicalReports.self, from: jsonData)
-                      var count = 0
-                      for aReport in reportList.techreports2 {
-                          count += 1
-                          print("\(count) " + aReport.title) }
+                      self.reports = reportList
+                      DispatchQueue.main.async {
+                          self.updateTheTable()
+                      }
                   } catch let jsonErr {
                       print("Error decoding JSON", jsonErr)
                   }
               }.resume()
-              print("You are here!")
            }
 
         // Uncomment the following line to preserve selection between presentations
@@ -52,6 +52,10 @@ class ResearchPapersTVC: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
+    }
+    
+    func updateTheTable() {
+        print(reports?.techreports2.count ?? 0)
     }
 
     /*
