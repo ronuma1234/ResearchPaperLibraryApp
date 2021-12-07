@@ -46,27 +46,30 @@ class ResearchPapersTVC: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return reports?.techreports2.count ?? 0
     }
     
     func updateTheTable() {
         print(reports?.techreports2.count ?? 0)
+        theTable.reloadData()
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "theCell", for: indexPath)
+        
+        cell.textLabel?.text = reports?.techreports2[indexPath.row].title ?? "no title"
+        cell.detailTextLabel?.text = reports?.techreports2[indexPath.row].authors ?? "no authors"
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
