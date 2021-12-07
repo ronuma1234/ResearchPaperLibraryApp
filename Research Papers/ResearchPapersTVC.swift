@@ -8,6 +8,7 @@
 import UIKit
 
 class ResearchPapersTVC: UITableViewController {
+    var selectedRow = 0
     var reports:technicalReports? = nil
     
     
@@ -34,6 +35,7 @@ class ResearchPapersTVC: UITableViewController {
                   }
               }.resume()
            }
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -68,6 +70,18 @@ class ResearchPapersTVC: UITableViewController {
         // Configure the cell...
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedRow = indexPath.row
+        performSegue(withIdentifier: "toDetail", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail" {
+            let detailViewController = segue.destination as! ViewController
+            detailViewController.info = reports?.techreports2[selectedRow]
+        }
     }
     
 
